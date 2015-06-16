@@ -1,0 +1,45 @@
+{
+  "name": "youtube-mp3-downloader",
+  "version": "0.2.0",
+  "description": "Downloads Youtube videos (in parallel, as streams), encodes the audio data as mp3 and stores them in a defineable location",
+  "keywords": [
+    "youtube",
+    "mp3",
+    "download",
+    "encode",
+    "ffmpeg",
+    "parallel",
+    "fast",
+    "streams"
+  ],
+  "private": false,
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "async": "1.2.1",
+    "fluent-ffmpeg": "2.0.1",
+    "progress-stream": "^1.1.1",
+    "ytdl-core": "0.5.1"
+  },
+  "author": {
+    "name": "TobiLG"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tobilg/youtube-mp3-downloader.git"
+  },
+  "engines": {
+    "node": ">=0.10.14"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/tobilg/youtube-mp3-downloader/blob/master/LICENSE"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/tobilg/youtube-mp3-downloader/issues"
+  }
+}
