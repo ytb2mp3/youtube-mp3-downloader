@@ -29,6 +29,9 @@ node_modules
 # WebStorm IDE files
 .idea
 
+# Mac OS stuff
+.DS_Store
+
 # Tests
 test
 

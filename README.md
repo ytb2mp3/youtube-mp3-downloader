@@ -48,6 +48,30 @@ YD.on("progress", function(progress) {
 });
 ```
 
+You can also pass a file name for the respective video, which will then be used. Otherwise, the file name will be derived from the video title.
+```
+YD.download("rnkuRQ8tjIE", "Nancy Sinatra - Jackson.mp3");
+
+```
+
+While downloading, every `progressTimeout` timeframe, there will be an `progress` event triggered, outputting an object like
+
+```
+{
+    "videoId": "rnkuRQ8tjIE",
+    "progress": {
+        "percentage": 76.81,
+        "transferred": 5619680,
+        "length": "7315910",
+        "remaining": 1696230,
+        "eta": 3,
+        "runtime": 8,
+        "delta": 1834992,
+        "speed": 661138.82
+    }
+}
+```
+
 Upon finish, the following output will be returned:
 
 ```javascript
