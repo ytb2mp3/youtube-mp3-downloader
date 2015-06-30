@@ -72,6 +72,14 @@ While downloading, every `progressTimeout` timeframe, there will be an `progress
 }
 ```
 
+Furthermore, there will be a `queueSize` event emitted when the queue size changes (both positive and negative). This can be caught via
+
+```
+YD.on("queueSize", function(size) {
+    console.log(size);
+});
+```
+
 Upon finish, the following output will be returned:
 
 ```javascript
