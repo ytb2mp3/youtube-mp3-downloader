@@ -57,14 +57,13 @@ YD.on("progress", function(progress) {
 ```
 
 You can also pass a file name for the respective video, which will then be used. Otherwise, the file name will be derived from the video title.
-```
+```javascript
 YD.download("xh0ctVznxdM", "Winter By CyberSDF.mp3");
-
 ```
 
 While downloading, every `progressTimeout` timeframe, there will be an `progress` event triggered, outputting an object like
 
-```
+```javascript
 {
     "videoId": "xh0ctVznxdM",
     "progress": {
@@ -82,7 +81,7 @@ While downloading, every `progressTimeout` timeframe, there will be an `progress
 
 Furthermore, there will be a `queueSize` event emitted when the queue size changes (both positive and negative). This can be caught via
 
-```
+```javascript
 YD.on("queueSize", function(size) {
     console.log(size);
 });
@@ -111,7 +110,7 @@ Upon finish, the following output will be returned:
 To use it in a class which provides the downloading functionality, you could use it like this:
 
 **Downloader.js**
-```
+```javascript
 var YoutubeMp3Downloader = require('youtube-mp3-downloader');
 
 var Downloader = function() {
@@ -160,7 +159,7 @@ module.exports = Downloader;
 This class can then be used like this:
 
 **usage.js**
-```
+```javascript
 var Downloader = require("./Downloader");
 var dl = new Downloader();
 var i = 0;
