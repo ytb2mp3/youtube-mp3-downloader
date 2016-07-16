@@ -1,6 +1,6 @@
 {
   "name": "youtube-mp3-downloader",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "Downloads Youtube videos (in parallel, as streams), encodes the audio data as mp3 and stores them in a defineable location",
   "keywords": [
     "youtube",
