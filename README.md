@@ -114,6 +114,7 @@ To use it in a class which provides the downloading functionality, you could use
 var YoutubeMp3Downloader = require('youtube-mp3-downloader');
 
 var Downloader = function() {
+
 	var self = this;
     
     //Configure YoutubeMp3Downloader with your settings
@@ -127,23 +128,32 @@ var Downloader = function() {
 
 	self.callbacks = {};
 
-	self.YD.on("finished", function(data) {
+	self.YD.on("finished", function(error, data) {
 		
 		if (self.callbacks[data.videoId]) {
-			self.callbacks[data.videoId](null,data);
+			self.callbacks[data.videoId](error, data);
 		} else {
 			console.log("Error: No callback for videoId!");
 		}
 	
     });
 
-	self.YD.on("error", function(error) {
-        console.log(error);
+	self.YD.on("error", function(error, data) {
+	
+        console.error(error + " on videoId " + data.videoId);
+    
+        if (self.callbacks[data.videoId]) {
+            self.callbacks[data.videoId](error, data);
+        } else {
+            console.log("Error: No callback for videoId!");
+        }
+        
     });
 	
 }
 
 Downloader.prototype.getMP3 = function(track, callback){
+
 	var self = this;
 	
 	// Register callback
