@@ -1,0 +1,109 @@
+dependencies:
+  async: 2.5.0
+  fluent-ffmpeg: 2.1.2
+  progress-stream: 2.0.0
+  ytdl-core: 0.14.4
+packages:
+  /async/2.5.0:
+    dependencies:
+      lodash: 4.17.4
+    resolution:
+      integrity: sha512-e+lJAJeNWuPCNyxZKOBdaJGyLGHugXVQtrAwtuAe2vhxTYxFTKE73p8JuTmdH0qdQZtDvI4dhJwjZc5zsfIsYw==
+  /core-util-is/1.0.2:
+    resolution:
+      integrity: sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=
+  /fluent-ffmpeg/2.1.2:
+    dependencies:
+      async: 2.5.0
+      which: 1.2.14
+    resolution:
+      integrity: sha1-yVLeIkD4EuvaCqgAbXd27irPfXQ=
+  /html-entities/1.2.1:
+    resolution:
+      integrity: sha1-DfKTUfByEWNRXfueVUPl9u7VFi8=
+  /inherits/2.0.3:
+    resolution:
+      integrity: sha1-Yzwsg+PaQqUC9SRmAiSA9CCCYd4=
+  /isarray/1.0.0:
+    resolution:
+      integrity: sha1-u5NdSFgsuhaMBoNJV6VKPgcSTxE=
+  /isexe/2.0.0:
+    resolution:
+      integrity: sha1-6PvzdNxVb/iUehDcsFctYz8s+hA=
+  /lodash/4.17.4:
+    resolution:
+      integrity: sha1-eCA6TRwyiuHYbcpkYONptX9AVa4=
+  /m3u8stream/0.1.3:
+    dependencies:
+      miniget: 1.0.0
+    resolution:
+      integrity: sha1-/8un9PN1E8mCzEV4XooNfXRIw50=
+  /miniget/1.0.0:
+    resolution:
+      integrity: sha1-AZdDJkszeGxFn4F9+BSCZj30lBo=
+  /process-nextick-args/1.0.7:
+    resolution:
+      integrity: sha1-FQ4gt1ZZCtP5EJPyWk8q2L/zC6M=
+  /progress-stream/2.0.0:
+    dependencies:
+      speedometer: 1.0.0
+      through2: 2.0.3
+    resolution:
+      integrity: sha1-+sY6Cz0R3qy7CWmrzJOyFLzhntU=
+  /readable-stream/2.3.3:
+    dependencies:
+      core-util-is: 1.0.2
+      inherits: 2.0.3
+      isarray: 1.0.0
+      process-nextick-args: 1.0.7
+      safe-buffer: 5.1.1
+      string_decoder: 1.0.3
+      util-deprecate: 1.0.2
+    resolution:
+      integrity: sha512-m+qzzcn7KUxEmd1gMbchF+Y2eIUbieUaxkWtptyHywrX0rE8QEYqPC07Vuy4Wm32/xE16NcdBctb8S0Xe/5IeQ==
+  /safe-buffer/5.1.1:
+    resolution:
+      integrity: sha512-kKvNJn6Mm93gAczWVJg7wH+wGYWNrDHdWvpUmHyEsgCtIwwo3bqPtV4tR5tuPaUhTOo/kvhVwd8XwwOllGYkbg==
+  /sax/1.2.4:
+    resolution:
+      integrity: sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==
+  /speedometer/1.0.0:
+    resolution:
+      integrity: sha1-zWccsGdSwivKM3Di8zREC+T8YuI=
+  /string_decoder/1.0.3:
+    dependencies:
+      safe-buffer: 5.1.1
+    resolution:
+      integrity: sha512-4AH6Z5fzNNBcH+6XDMfA/BTt87skxqJlO0lAh3Dker5zThcAxG6mKz+iGu308UKoPPQ8Dcqx/4JhujzltRa+hQ==
+  /through2/2.0.3:
+    dependencies:
+      readable-stream: 2.3.3
+      xtend: 4.0.1
+    resolution:
+      integrity: sha1-AARWmzfHx0ujnEPzzteNGtlBQL4=
+  /util-deprecate/1.0.2:
+    resolution:
+      integrity: sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=
+  /which/1.2.14:
+    dependencies:
+      isexe: 2.0.0
+    resolution:
+      integrity: sha1-mofEN48D6CfOyvGs31bHNsAcFOU=
+  /xtend/4.0.1:
+    resolution:
+      integrity: sha1-pcbVMr5lbiPbgg77lDofBJmNY68=
+  /ytdl-core/0.14.4:
+    dependencies:
+      html-entities: 1.2.1
+      m3u8stream: 0.1.3
+      miniget: 1.0.0
+      sax: 1.2.4
+    resolution:
+      integrity: sha512-ZyTrTxldnic53O1Mp0AuQYY0TXwl7sSMsjC58GbCD1fsIPMBhu3jR8b3oBm+XghpojkNCPWd4L+YXA45F39JHQ==
+registry: 'https://registry.npmjs.org/'
+shrinkwrapVersion: 3
+specifiers:
+  async: ^2.4.0
+  fluent-ffmpeg: 2.1.2
+  progress-stream: ^2.0.0
+  ytdl-core: ^0.14.1
