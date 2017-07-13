@@ -65,17 +65,17 @@ While downloading, every `progressTimeout` timeframe, there will be an `progress
 
 ```javascript
 {
-	"videoId": "Vhd6Kc4TZls",
-	"progress": {
-		"percentage": 72.29996914191304,
-		"transferred": 19559221,
-		"length": 27052876,
-		"remaining": 7493655,
-		"eta": 2,
-		"runtime": 6,
-		"delta": 6591454,
-		"speed": 3009110.923076923
-	}
+    "videoId": "Vhd6Kc4TZls",
+    "progress": {
+        "percentage": 72.29996914191304,
+        "transferred": 19559221,
+        "length": 27052876,
+        "remaining": 7493655,
+        "eta": 2,
+        "runtime": 6,
+        "delta": 6591454,
+        "speed": 3009110.923076923
+    }
 }
 ```
 
@@ -91,18 +91,18 @@ Upon finish, the following output will be returned:
 
 ```javascript
 {
-	"videoId": "Vhd6Kc4TZls",
-	"stats": {
-		"transferredBytes": 27052876,
-		"runtime": 7,
-		"averageSpeed": 3279136.48
-	},
-	"file": "/path/to/mp3/folder/Cold Funk - Funkorama.mp3",
-	"youtubeUrl": "http://www.youtube.com/watch?v=Vhd6Kc4TZls",
-	"videoTitle": "Cold Funk - Funkorama - Kevin MacLeod | YouTube Audio Library",
-	"artist": "Cold Funk",
-	"title": "Funkorama",
-	"thumbnail": "https://i.ytimg.com/vi/Vhd6Kc4TZls/hqdefault.jpg"
+    "videoId": "Vhd6Kc4TZls",
+    "stats": {
+        "transferredBytes": 27052876,
+        "runtime": 7,
+        "averageSpeed": 3279136.48
+    },
+    "file": "/path/to/mp3/folder/Cold Funk - Funkorama.mp3",
+    "youtubeUrl": "http://www.youtube.com/watch?v=Vhd6Kc4TZls",
+    "videoTitle": "Cold Funk - Funkorama - Kevin MacLeod | YouTube Audio Library",
+    "artist": "Cold Funk",
+    "title": "Funkorama",
+    "thumbnail": "https://i.ytimg.com/vi/Vhd6Kc4TZls/hqdefault.jpg"
 }
 ```
 
@@ -116,7 +116,7 @@ var YoutubeMp3Downloader = require("youtube-mp3-downloader");
 
 var Downloader = function() {
 
-	var self = this;
+    var self = this;
     
     //Configure YoutubeMp3Downloader with your settings
     self.YD = new YoutubeMp3Downloader({
@@ -127,19 +127,19 @@ var Downloader = function() {
         "progressTimeout": 2000                 // How long should be the interval of the progress reports
     });
 
-	self.callbacks = {};
+    self.callbacks = {};
 
-	self.YD.on("finished", function(error, data) {
+    self.YD.on("finished", function(error, data) {
 		
-		if (self.callbacks[data.videoId]) {
-			self.callbacks[data.videoId](error, data);
-		} else {
-			console.log("Error: No callback for videoId!");
-		}
-	
+        if (self.callbacks[data.videoId]) {
+            self.callbacks[data.videoId](error, data);
+        } else {
+            console.log("Error: No callback for videoId!");
+        }
+    
     });
 
-	self.YD.on("error", function(error, data) {
+    self.YD.on("error", function(error, data) {
 	
         console.error(error + " on videoId " + data.videoId);
     
@@ -148,21 +148,21 @@ var Downloader = function() {
         } else {
             console.log("Error: No callback for videoId!");
         }
-        
+     
     });
-	
-}
+
+};
 
 Downloader.prototype.getMP3 = function(track, callback){
 
-	var self = this;
+    var self = this;
 	
-	// Register callback
-	self.callbacks[track.videoId] = callback;
-	// Trigger download
+    // Register callback
+    self.callbacks[track.videoId] = callback;
+    // Trigger download
     self.YD.download(track.videoId, track.name);
-	
-}
+
+};
 
 module.exports = Downloader;
 ```
@@ -176,11 +176,11 @@ var dl = new Downloader();
 var i = 0;
 
 dl.getMP3({videoId: "Vhd6Kc4TZls", name: "Cold Funk - Funkorama.mp3"}, function(err,res){
-	i++;
-	if(err)
-		throw err;
-	else{
-		console.log("Song "+ i + " was downloaded: " + res.file);
-	}
+    i++;
+    if(err)
+        throw err;
+    else{
+        console.log("Song "+ i + " was downloaded: " + res.file);
+    }
 });
 ```
