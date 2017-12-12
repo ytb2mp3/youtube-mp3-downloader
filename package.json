@@ -1,6 +1,6 @@
 {
   "name": "youtube-mp3-downloader",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "Downloads Youtube videos (in parallel, as streams), encodes the audio data as mp3 and stores them in a defineable location",
   "keywords": [
     "youtube",
@@ -24,17 +24,17 @@
     "ytdl-core": "^0.14.4"
   },
   "author": {
-    "name": "TobiLG"
+    "name": "ytb2mp3"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/tobilg/youtube-mp3-downloader.git"
+    "url": "git://github.com/ytb2mp3/youtube-mp3-downloader.git"
   },
   "engines": {
     "node": ">=4.0.0"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tobilg/youtube-mp3-downloader/issues"
+    "url": "https://github.com/ytb2mp3/youtube-mp3-downloader/issues"
   }
 }
