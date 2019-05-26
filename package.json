@@ -37,5 +37,6 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ytb2mp3/youtube-mp3-downloader/issues"
-  }
+  },
+  "types": "./typings/index.d.ts"
 }
