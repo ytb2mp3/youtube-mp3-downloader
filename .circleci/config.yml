@@ -7,8 +7,9 @@ defaults: &defaults
 
 jobs:
   deploy:
-    <<: *defaults
+    <<: *defaults  
     steps:
+      - checkout
       - run:
           name: Authenticate with registry
           command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/repo/.npmrc
