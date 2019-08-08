@@ -1,4 +1,5 @@
 var YoutubeMp3Downloader = require("../index");
+var os = require("os");
 
 var Downloader = function() {
 
@@ -7,7 +8,7 @@ var Downloader = function() {
     //Configure YoutubeMp3Downloader with your settings 
     self.YD = new YoutubeMp3Downloader({
         "ffmpegPath": "/usr/local/bin/ffmpeg",  // Where is the FFmpeg binary located? TODO: Set correct path before testing!
-        "outputPath": "/path/to/mp3/folder",    // Where should the downloaded and encoded files be stored? TODO: Set correct path before testing!
+        "outputPath": os.tmpdir(),              // Where should the downloaded and encoded files be stored? TODO: Set correct path before testing!
         "youtubeVideoQuality": "highest",       // What video quality should be used? 
         "queueParallelism": 2,                  // How many parallel downloads/encodes should be started? 
         "progressTimeout": 2000                 // How long should be the interval of the progress reports 
