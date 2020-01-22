@@ -1,6 +1,6 @@
 {
   "name": "youtube-mp3-downloader-fixed",
-  "version": "0.6.4",
+  "version": "0.6.5",
   "description": "Downloads Youtube videos (in parallel, as streams), encodes the audio data as mp3 and stores them in a defineable location",
   "keywords": [
     "youtube",
@@ -22,7 +22,7 @@
     "fluent-ffmpeg": "2.1.2",
     "progress-stream": "^2.0.0",
     "sanitize-filename": "^1.6.1",
-    "ytdl-core": "^1.0.5"
+    "ytdl-core": "^1.0.7"
   },
   "author": {
     "name": "ytb2mp3"
