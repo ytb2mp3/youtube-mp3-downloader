@@ -7,11 +7,9 @@ var Downloader = function() {
 
     //Configure YoutubeMp3Downloader with your settings 
     self.YD = new YoutubeMp3Downloader({
-        "ffmpegPath": "/usr/local/bin/ffmpeg",  // Where is the FFmpeg binary located? TODO: Set correct path before testing!
-        "outputPath": os.tmpdir(),              // Where should the downloaded and encoded files be stored? TODO: Set correct path before testing!
-        "youtubeVideoQuality": "highest",       // What video quality should be used? 
-        "queueParallelism": 2,                  // How many parallel downloads/encodes should be started? 
-        "progressTimeout": 2000                 // How long should be the interval of the progress reports 
+        "ffmpegPath": "/usr/local/bin/ffmpeg",  // FFmpeg binary location TODO: Set correct path before testing!
+        "queueParallelism": 2,                  // Download parallelism (default: 1)
+        "progressTimeout": 2000                 // Interval in ms for the progress reports (default: 1000)
     });
 
     self.callbacks = {};

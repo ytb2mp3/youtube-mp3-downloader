@@ -16,7 +16,7 @@ To run this project, you need to have a local installation of FFmpeg present on 
 
 #### Checkout the project from Github to a local folder
 
-`git clone https://github.com/tobilg/youtube-mp3-downloader.git`
+`git clone https://github.com/ytb2mp3/youtube-mp3-downloader.git`
 
 #### Install module dependencies
 
@@ -33,11 +33,11 @@ var YoutubeMp3Downloader = require("youtube-mp3-downloader");
 
 //Configure YoutubeMp3Downloader with your settings
 var YD = new YoutubeMp3Downloader({
-    "ffmpegPath": "/path/to/ffmpeg",        // Where is the FFmpeg binary located?
-    "outputPath": "/path/to/mp3/folder",    // Where should the downloaded and encoded files be stored?
-    "youtubeVideoQuality": "highest",       // What video quality should be used?
-    "queueParallelism": 2,                  // How many parallel downloads/encodes should be started?
-    "progressTimeout": 2000                 // How long should be the interval of the progress reports
+    "ffmpegPath": "/path/to/ffmpeg",        // FFmpeg binary location
+    "outputPath": "/path/to/mp3/folder",    // Output file location (default: the home directory)
+    "youtubeVideoQuality": "highestaudio",  // Desired video quality (default: highestaudio)
+    "queueParallelism": 2,                  // Download parallelism (default: 1)
+    "progressTimeout": 2000                 // Interval in ms for the progress reports (default: 1000)
 });
 
 //Download video and save as MP3 file
@@ -120,11 +120,11 @@ var Downloader = function() {
     
     //Configure YoutubeMp3Downloader with your settings
     self.YD = new YoutubeMp3Downloader({
-        "ffmpegPath": "/path/to/ffmpeg",        // Where is the FFmpeg binary located?
-        "outputPath": "/path/to/mp3/folder",    // Where should the downloaded and encoded files be stored?
-        "youtubeVideoQuality": "highest",       // What video quality should be used?
-        "queueParallelism": 2,                  // How many parallel downloads/encodes should be started?
-        "progressTimeout": 2000,                // How long should be the interval of the progress reports
+        "ffmpegPath": "/path/to/ffmpeg",        // FFmpeg binary location
+        "outputPath": "/path/to/mp3/folder",    // Output file location (default: the home directory)
+        "youtubeVideoQuality": "highestaudio",  // Desired video quality (default: highestaudio)
+        "queueParallelism": 2,                  // Download parallelism (default: 1)
+        "progressTimeout": 2000                 // Interval in ms for the progress reports (default: 1000)
         "outputOptions" : ["-af", "silenceremove=1:0:-50dB"] // Additional output options passend to ffmpeg
     });
 
