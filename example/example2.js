@@ -1,13 +1,10 @@
 var YoutubeMp3Downloader = require("../index");
-var os = require("os");
 
 //Configure YoutubeMp3Downloader with your settings
 var YD = new YoutubeMp3Downloader({
-    "ffmpegPath": "/usr/local/bin/ffmpeg",  // Where is the FFmpeg binary located?
-    "outputPath": os.tmpdir(),              // Where should the downloaded and encoded files be stored?
-    "youtubeVideoQuality": "highest",       // What video quality should be used?
-    "queueParallelism": 2,                  // How many parallel downloads/encodes should be started?
-    "progressTimeout": 2000                 // How long should be the interval of the progress reports
+    "ffmpegPath": "/usr/local/bin/ffmpeg",  // FFmpeg binary location
+    "queueParallelism": 2,                  // Download parallelism (default: 1)
+    "progressTimeout": 2000                 // Interval in ms for the progress reports (default: 1000)
 });
 
 //Download video and save as MP3 file
