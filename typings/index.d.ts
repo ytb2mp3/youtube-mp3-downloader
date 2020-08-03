@@ -6,6 +6,7 @@ declare module YoutubeMp3Downloader {
     youtubeVideoQuality?: 'lowest' | 'highest' | string | number;
     queueParallelism: number;
     progressTimeout: number;
+    allowWebm?: boolean
   }
 
   export interface IResultObject {
