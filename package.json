@@ -22,7 +22,7 @@
     "fluent-ffmpeg": "2.1.2",
     "progress-stream": "^2.0.0",
     "sanitize-filename": "^1.6.3",
-    "ytdl-core": "^3.2.0"
+    "ytdl-core": "^3.2.2"
   },
   "author": {
     "name": "ytb2mp3"
