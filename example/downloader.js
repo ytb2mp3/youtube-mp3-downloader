@@ -1,5 +1,4 @@
 var YoutubeMp3Downloader = require("../index");
-var os = require("os");
 
 var Downloader = function() {
 

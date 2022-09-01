@@ -1,6 +1,6 @@
 {
   "name": "youtube-mp3-downloader",
-  "version": "0.7.10",
+  "version": "0.7.11",
   "description": "Downloads Youtube videos (in parallel, as streams), encodes the audio data as mp3 and stores them in a defineable location",
   "keywords": [
     "youtube",
@@ -18,11 +18,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "async": "^3.2.2",
+    "async": "^3.2.4",
     "fluent-ffmpeg": "2.1.2",
     "progress-stream": "^2.0.0",
     "sanitize-filename": "^1.6.3",
-    "ytdl-core": "^4.9.1"
+    "ytdl-core": "4.10.0"
   },
   "author": {
     "name": "ytb2mp3"
