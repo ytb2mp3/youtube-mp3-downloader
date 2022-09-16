@@ -8,6 +8,7 @@ declare module YoutubeMp3Downloader {
     progressTimeout: number;
     allowWebm?: boolean;
     requestOptions?: {};
+    outputOptions?: string[];
   }
 
   export interface IResultObject {
